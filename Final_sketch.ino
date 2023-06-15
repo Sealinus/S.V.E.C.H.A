@@ -107,8 +107,8 @@ void microphone(){
     curVol = analyzer.getVol();
     Serial.println(curVol);
     if (curVol >= 1){    
-      if (noiseVal >= 6){
-       // noiseVal = 0;
+      if (noiseVal >= 4){
+        noiseVal = 0;
         Serial.println("Be quiet plz");
         digitalWrite(46, HIGH);
            //если зафиксирован шум  Предположительно будет проигроваться запись "ТИИИИИИИИИИИИИИИХО"
